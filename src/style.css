@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --primary-background: rgb(41, 41, 100);
+  --primary-text-color: #fff;
+  --secondary-text-color: rgb(165, 165, 247);
+}
+
+.main_container {
+  background-color: var(--primary-background);
+  min-height: 100vh;
+  padding: 50px 100px;
+}
+
+label {
+  text-align: center;
+  display: block;
+  color: var(--primary-text-color);
+  font-size: 30px;
+}
+
+input {
+  width: 350px;
+  padding: 5px;
+  outline: none;
+  margin: 20px 0;
+}
+
+.container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.card {
+  max-width: 400px;
+  box-shadow: 2px 2px 15px var(--secondary-text-color);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  transition: 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+.card .left img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.card .right h1,
+.card .right h2 {
+  font-size: 25px;
+  color: var(--primary-text-color);
+  margin-bottom: 20px;
+}
+
+.card .right h1 span,
+.card .right h2 span {
+  font-size: 30px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+}
+
+.content {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.repo,
+.location {
+  display: flex;
+  flex-direction: column;
+  color: var(--primary-text-color);
+}
+
+.repo span,
+.location span {
+  color: var(--secondary-text-color);
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  padding: 5px 10px;
+  color: white;
+  background-color: var(--secondary-text-color);
+  display: inline;
+  transition: 0.5s;
+}
+
+a:hover {
+  background-color: white;
+  color: var(--secondary-text-color);
+}
+button {
+  outline: none;
+  border-width: 0;
+  padding: 5px 10px;
+  background-color: var(--secondary-text-color);
+  color: var(--primary-text-color);
+  cursor: pointer;
+}
+@media (max-width: 990px) {
+  .main_container {
+    padding: 25px;
+  }
+  .container {
+    width: 290px;
+  }
+
+  label {
+    font-size: 20px;
+  }
+
+  input {
+    width: 320px;
+  }
+  .card {
+    max-width: 320px;
+    padding: 10px 0px;
+  }
+
+  .card:hover {
+    transform: scale(1.04);
+  }
+
+  .card .left img {
+    height: 100px;
+    width: 100px;
+
+    margin-right: 10px;
+  }
+
+  .card .right h1,
+  .card .right h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .card .right h1 span,
+  .card .right h2 span {
+    font-size: 25px;
+    margin-right: 10px;
+  }
+
+  .repo span,
+  .location span {
+    font-size: 15px;
+  }
+
+  a {
+    padding: 5px;
+  }
+}
